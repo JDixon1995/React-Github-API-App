@@ -1,9 +1,15 @@
 import './App.css';
+import SearchForm from './components/SearchForm';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-     <h1>Github API</h1>
+      <div className='page'>
+        <h1>Github API</h1>
+        <div className='landing=page-container'>
+          <SearchForm />
+        </div>
+      </div>
     </div>
   );
 }
