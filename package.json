@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jdixon1995.github.io/React-Github-API-App/",
+  "homepage": "https://jdixon1995.github.io/React-Github-API-App",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
