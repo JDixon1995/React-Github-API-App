@@ -22,14 +22,20 @@ const App = () => {
 	}
 
 	const searchRepos = () => {
-		setLoading(true)
+    setLoading(true)
 		axios({
 			method: "GET",
 			url: `https://api.github.com/users/${username}/repos`,
 		}).then(res => {
+      setTimeout(() => {
+        return
+      }, 7000)
 			setLoading(false)
 			setRepos(res.data)
-		})
+		}).catch(() => {
+      setLoading(false)
+      alert(`${username} does not exist.`)
+    })
 	}
 
 	const renderRepo = (repo) => {
