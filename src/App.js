@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import axios from "axios"
 import RepoDetails from './components/RepoDetails'
 
@@ -10,6 +10,11 @@ const App = () => {
 	const [repos, setRepos] = useState([])
 	const [details, setDetails] = useState({})
   const [detailsLoading, setDetailsLoading] = useState(false)
+
+  useEffect(() => {
+    setRepos([])
+    setDetails({})
+  }, [username])
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
